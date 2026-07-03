@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Advisor Chat</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="main-header">
+        <div class="header-content1">
+            <a href="{{ url_for('home') }}">
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 237.000000 237.000000" preserveAspectRatio="xMidYMid meet">
+                    <g transform="translate(0.000000,237.000000) scale(0.100000,-0.100000)" fill="#f5deb3" stroke="none">
+                        <path d="M1211 1919 c-21 -97 -7 -154 44 -177 59 -27 61 -21 29 88 -17 57 -11 63 14 13 36 -71 44 -135 31 -272 -14 -161 -13 -156 -44 -135 -17 11 -25 25 -25 45 0 73 -49 109 -149 109 -42 0 -77 -7 -116 -24 -30 -14 -55 -27 -55 -30 0 -9 86 -119 108 -140 30 -26 101 -32 140 -12 18 9 32 20 32 24 0 9 -87 63 -140 86 l-35 16 39 -5 c53 -6 134 -47 187 -93 39 -36 43 -43 47 -98 l4 -59 -47 -17 c-35 -12 -54 -14 -76 -6 -20 7 -39 6 -62 -2 -37 -11 -74 -45 -60 -53 26 -15 188 -59 303 -82 74 -14 136 -28 138 -30 8 -8 76 32 117 68 l40 35 -49 22 c-43 19 -56 21 -94 12 -39 -9 -48 -7 -79 13 -18 13 -47 26 -63 30 -27 6 -29 9 -35 82 -9 89 0 106 86 166 50 35 154 75 165 64 3 -3 -23 -19 -58 -36 -35 -18 -74 -40 -87 -50 l-24 -19 31 -16 c45 -23 113 -21 146 5 36 28 110 139 100 148 -26 22 -119 51 -164 51 -73 0 -117 -21 -136 -66 -8 -20 -13 -42 -10 -49 5 -13 -33 -55 -49 -55 -4 0 -5 59 -1 132 6 108 11 136 27 156 48 62 -10 158 -121 197 l-39 14 -10 -50z"/>
+                        <path d="M1820 1239 c-25 -18 -76 -59 -114 -92 -38 -32 -86 -70 -107 -84 -37 -24 -37 -25 -22 -52 20 -35 12 -72 -25 -106 -52 -49 -84 -51 -269 -20 -161 26 -212 28 -295 9 -41 -9 -37 22 5 35 71 22 115 21 262 -4 177 -29 222 -31 255 -8 32 22 40 33 40 59 0 39 -34 55 -182 85 -156 32 -239 56 -340 100 -106 46 -181 62 -278 57 -103 -5 -169 -32 -274 -113 -39 -30 -116 -74 -171 -98 -94 -42 -100 -46 -103 -77 -7 -71 81 -271 135 -307 21 -14 33 -11 160 45 155 69 219 86 278 77 22 -4 117 -29 212 -56 191 -55 269 -67 328 -50 22 6 139 64 260 129 l220 118 102 139 c56 77 104 150 108 163 8 33 -10 59 -47 65 -18 4 -46 9 -63 12 -24 5 -39 0 -75 -26z"/>
+                    </g>
+                </svg>
+                <div>Crop Analyzer</div>
+            </a>
+        </div>
+        <div class="header-content">
+            <div class="content" id="home">Home</div>
+            <div class="content" id="about">About</div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="chat-container">
+            <div class="chat-header">
+                <h2>Crop Advisor Chat</h2>
+                <select id="language-selector" class="form-control">
+                    <option value="en">English</option>
+                    <option value="hi">हिंदी (Hindi)</option>
+                    <option value="mr">मराठी (Marathi)</option>
+                    <!-- Add more languages as needed -->
+                </select>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <div class="message system">
+                    Hello! I'm your Crop Advisor. How can I help you today?
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Type your question here...">
+                <button id="send-button">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer" id="footerr">
+        <div class="contentholder">
+            <div class="footercontent">
+                <div class="heads">About Crop Analyzer</div>
+                <div class="maintext">A Crop Analyzer is a tool that assesses crop health, soil conditions, and growth using sensors or AI, helping farmers optimize yield and sustainability.</div>
+            </div>
+            <div class="footercontent">
+                <div class="heads">Contact Us</div>
+                <div class="maintext2">Have questions or feedback? Reach out to us at
+                    <a href="mailto:kalekaran78@gmail.com,ishaannandoskar@gmail.com">contact@cropanalyzer.com</a>
+                </div>
+            </div>
+            <div class="footercontent">
+                <div class="heads">Follow Us</div>
+                <div class="maintext1">
+                    <a href="https://www.instagram.com/i5haan.n/" target="_blank" onclick="window.open('https://www.instagram.com/not_karan_18/', '_blank');">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 24">
+                            <path d="M 8 3 C 5.239 3 3 5.239 3 8 L 3 16 C 3 18.761 5.239 21 8 21 L 16 21 C 18.761 21 21 18.761 21 16 L 21 8 C 21 5.239 18.761 3 16 3 L 8 3 z M 18 5 C 18.552 5 19 5.448 19 6 C 19 6.552 18.552 7 18 7 C 17.448 7 17 6.552 17 6 C 17 5.448 17.448 5 18 5 z M 12 7 C 14.761 7 17 9.239 17 12 C 17 14.761 14.761 17 12 17 C 9.239 17 7 14.761 7 12 C 7 9.239 9.239 7 12 7 z M 12 9 A 3 3 0 0 0 9 12 A 3 3 0 0 0 12 15 A 3 3 0 0 0 15 12 A 3 3 0 0 0 12 9 z" fill="#F5DEB3"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="end">
+            ©2025 Plant Disease Detection
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/one.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+</html> 
